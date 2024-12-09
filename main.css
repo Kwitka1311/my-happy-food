@@ -189,8 +189,8 @@ footer nav ul li a:hover {
 
 @media (min-width: 601px) {
     .video-container {
-        width: 70%;
-        max-width: 700px;
+        width: 60%;
+        max-width: 480px;
         margin: 0 auto;
     }
 }
