@@ -68,6 +68,7 @@ section p {
     display: block;
     margin: 20px auto;
     border-radius: 50%;
+    float: left;
 }
 
 section img {
@@ -170,20 +171,19 @@ footer nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Responsive video container */
 .video-container {
     position: relative;
-    padding-bottom: 30%; /* Adjusted height */
+    padding-bottom: 30%; 
     height: 0;
     overflow: hidden;
     max-width: 100%;
     background: #000;
-    float: left; /* Align to the left */
-    margin-right: 20px; /* Space between video and text */
+    float: left; 
+    margin-right: 20px; 
 }
 
 .video-container iframe {
-    position: absolute;
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
