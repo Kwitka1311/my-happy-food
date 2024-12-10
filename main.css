@@ -216,3 +216,7 @@ footer nav ul li a:hover {
     nav ul li {
         margin-bottom: 10px;
     }
+    
+    .extra-space { 
+        margin-top: 20px; 
+}    
