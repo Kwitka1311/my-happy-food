@@ -1,17 +1,17 @@
 [
     {
         "title": "Brócoli con Salsa 'Roy'",
-        "description": "Delicious and healthy broccoli recipe.",
+        "description": "Deliciosa receta de brócoli con una salsa única y saludable.",
         "videoUrl": "https://www.youtube.com/embed/x4bSJwRJmmc?si=zLlwqBRAlzZZ24US"
     },
     {
         "title": "Cómo Preparar Tartas de Queso Vegano",
-        "description": "A guide to making vegan cheesecake with lemon and ginger.",
+        "description": "Guía para preparar tartas de queso vegano con limón y jengibre.",
         "videoUrl": "https://www.youtube.com/embed/K69_iiVZFlk?si=W8vQzqmKPf5GQ8sw"
     },
     {
         "title": "Preparamos el Desayuno Nacional Turco - Menemen",
-        "description": "Learn how to make Turkish national breakfast, Menemen.",
+        "description": "Aprende a preparar el desayuno nacional turco, Menemen.",
         "videoUrl": "https://www.youtube.com/embed/wMmAnPAvk0A?si=GTxZsMLOiutC7fkB"
     }
 ]
