@@ -39,10 +39,10 @@
     <script>
         $(document).ready(function() {
             $.ajax({
-                url: "blog-posts.json", // Ensure this path is correct
+                url: "blog-posts.json",
                 method: 'GET',
                 success: function(data) {
-                    console.log(data); // Log the data to check if it's being fetched
+                    console.log(data); 
                     let postsHTML = '';
                     data.forEach(post => {
                         postsHTML += `<article>
