@@ -269,7 +269,7 @@ section h2 {
   .about-image,
   .recipe-image {
     width: 100%;
-    height: auto;
+    height: fit-content;
     display: block;
     margin: 0 auto 20px;
     float: none;
