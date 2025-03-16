@@ -1,222 +1,245 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
-    background: #50b3a2;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    margin-bottom: 20px;
+  width: 100%;
+  background-color: #50b3a2;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    margin-bottom: 10px;
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.header-content h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+.header-content nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.header-content nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.header-content nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
 }
 
 section {
-    margin-bottom: 20px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.section-heading {
+  text-align: center;
+  color: #50b3a2;
+  margin-bottom: 20px;
+  font-size: 1.8em;
 }
 
 section p {
-    margin: 10px 0;
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #555;
 }
 
-.recipe-image { 
-    width: 300px; 
-    height: 300px; 
-    object-fit: cover; 
+.slider {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto 20px auto;
 }
 
-.about-image {
-    width: 300px;
-    height: auto;
-    display: block;
-    margin: 20px 20px 20px 0;
-    border-radius: 50%;
-    float: left;
+.slides {
+  position: relative;
 }
 
-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
+.slide {
+  display: none; 
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-article h2 {
-    text-decoration: underline;
-    margin-bottom: 10px;
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-article p {
-    margin-bottom: 10px;
+.parallax-slide {
+  background: url("parallax.jpg") no-repeat center center;
+  background-size: cover;
+  animation: scrollBackground 20s linear infinite;
 }
 
-article a {
-    color: #50b3a2;
-    text-decoration: none;
+@keyframes scrollBackground {
+  0% {
+    background-position-y: 0%;
+  }
+  100% {
+    background-position-y: 100%;
+  }
 }
 
-article a:hover {
-    text-decoration: underline;
+.slide-content {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
 }
 
-article {
-    margin-bottom: 40px;
+.descubre-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.ingredientes, .instrucciones {
-    margin-top: 20px;
+.descubre-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-section h2 {
-    margin-bottom: 10px;
-    color: #50b3a2;
+.slider-controls {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
-section p {
-    font-size: 1.1em;
-    color: #555;
+
+.hidden {
+  display: none !important;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.arrow {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-form label {
-    margin-top: 10px;
-}
-
-form input, form textarea, form button {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-form button {
-    background: #50b3a2;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-form button:hover {
-    background: #3e8277;
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
 }
 
 footer nav ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 footer nav ul li {
-    display: inline;
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 footer nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 footer nav ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.video-container {
-    position: relative;
-    padding-bottom: 30%; 
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-    float: left; 
-    margin-right: 20px; 
+.recipe-image { 
+  width: 300px; 
+  height: 300px; 
+  object-fit: cover; 
 }
 
-.video-container iframe {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.about-image {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 20px 20px 20px 0;
+  border-radius: 50%;
+  float: left;
 }
 
-@media (min-width: 601px) {
-    .video-container {
-        width: 60%;
-        max-width: 560px;
-        margin: 0 auto 30px auto; 
-        float: none; 
-    }
+article h2 {
+  text-decoration: underline;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 600px) {
-    .video-container {
-        width: 100%;
-        padding-bottom: 56.25%; 
-        margin: 0 0 20px 0; 
-        float: none; 
-    }
+article p {
+  margin-bottom: 10px;
+}
 
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+article a {
+  color: #50b3a2;
+  text-decoration: none;
+}
 
-    nav ul li {
-        margin-bottom: 10px;
-    }
-    
-    .extra-space { 
-        margin-top: 20px; 
-}    
+article a:hover {
+  text-decoration: underline;
+}
+
+article {
+  margin-bottom: 40px;
+}
+
+.ingredientes,
+.instrucciones {
+  margin-top: 20px;
+}
+
+section h2 {
+  margin-bottom: 10px;
+  color: #50b3a2;
+}
