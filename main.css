@@ -10,64 +10,63 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    padding: 20px; /* From second file */
+    padding: 20px;
 }
 
 /* Header Styles */
 header {
-    width: 100%; /* From first file */
+    width: 100%;
     background: #50b3a2;
     color: white;
     padding: 20px 0;
     text-align: center;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* From first file */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2em; /* From first file */
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
 /* Navigation Styles */
-nav ul.nav-main, nav ul.nav-footer {
+nav ul {
     list-style: none;
     padding: 0;
-    display: flex; /* Unified approach */
+    display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px; /* Added for spacing */
-    flex-direction: column; /* From second file, applied via media query */
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-nav ul.nav-main li, nav ul.nav-footer li {
+nav ul li {
     margin: 0 10px;
 }
 
-nav ul.nav-main li a, nav ul.nav-footer li a {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul.nav-main li a:hover, nav ul.nav-footer li a:hover {
+nav ul li a:hover {
     text-decoration: underline;
 }
 
 /* Section Styles */
 section {
-    margin-bottom: 20px;
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .section-heading {
     text-align: center;
     color: #50b3a2;
     margin-bottom: 20px;
-    font-size: 1.8em; /* From first file */
+    font-size: 1.8em;
 }
 
 section h2 {
@@ -77,8 +76,8 @@ section h2 {
 
 section p {
     margin: 10px 0;
-    font-size: 1.1em; /* From second file */
-    color: #555; /* From second file */
+    font-size: 1.1em;
+    color: #555;
 }
 
 /* Image Styles */
@@ -95,54 +94,6 @@ section p {
     margin: 20px 20px 20px 0;
     border-radius: 50%;
     float: left;
-}
-
-/* Slider Styles */
-.slider {
-    position: relative;
-    max-width: 750px;
-    margin: 0 auto 20px auto;
-}
-
-.slides {
-    position: relative;
-}
-
-.slide {
-    display: none; 
-    width: 100%;
-    height: 400px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.parallax-slide {
-    background: url("parallax.jpg") no-repeat center center;
-    background-size: cover;
-    animation: scrollBackground 20s linear infinite;
-}
-
-@keyframes scrollBackground {
-    0% {
-        background-position-y: 0%;
-    }
-    100% {
-        background-position-y: 100%;
-    }
-}
-
-.slide-content {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
 }
 
 /* Form Styles */
@@ -175,6 +126,26 @@ form button:hover {
     background: #3e8277;
 }
 
+/* Video Container */
+.video-container {
+    position: relative;
+    padding-bottom: 30%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    float: left;
+    margin-right: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Footer Styles */
 footer {
     background: #333;
@@ -184,55 +155,36 @@ footer {
     margin-top: 20px;
 }
 
-footer nav ul.nav-footer {
+footer nav ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-/* Video Styles */
-.video-container {
-    position: relative;
-    padding-bottom: 30%; 
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-    float: left; 
-    margin-right: 20px; 
-}
-
-.video-container iframe {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Media Queries */
+/* Responsive Design */
 @media (min-width: 601px) {
     .video-container {
         width: 60%;
         max-width: 560px;
-        margin: 0 auto 30px auto; 
-        float: none; 
+        margin: 0 auto 30px auto;
+        float: none;
     }
 }
 
 @media (max-width: 600px) {
     .video-container {
         width: 100%;
-        padding-bottom: 56.25%; 
-        margin: 0 0 20px 0; 
-        float: none; 
+        padding-bottom: 56.25%;
+        margin: 0 0 20px 0;
+        float: none;
     }
 
-    nav ul.nav-main {
+    nav ul {
         flex-direction: column;
         align-items: center;
     }
 
-    nav ul.nav-main li {
+    nav ul li {
         margin-bottom: 10px;
     }
 }
