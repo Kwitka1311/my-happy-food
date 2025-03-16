@@ -1,40 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="main.css">
-		<title> My Happy Food - Home</title>
-	</head>
-	<body>
-		<header>
-			<h1>Bienvenido a My Happy Food</h1>
-            <nav>
-             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="recipes.html">Recetas</a></li>
-                <li><a href="about.html">Sobre m&iacute;</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </nav>
-		</header>
-		<section>
-			<p>Aqu&iacute; podr&aacute;s encontrar recetas veganas ricas, saludables y r&aacute;pidas para cualquier ocasi&oacute;n.</p>
-            <p> Explora nuevas recetas y descubre el placer de la comida vegana con nuestras deliciosas opciones</p>
-            <center><img src="collection.jpeg" alt="Collection" height="750" width="750"></center>
-        </section>
-        <footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <title>My Happy Food - Home</title>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Bienvenido a My Happy Food</h1>
+      <nav>
+        <ul>
+       	   <li><a href="index.html">Home</a></li>
+           <li><a href="recipes.html">Recetas</a></li>
+           <li><a href="about.html">Sobre m&iacute;</a></li>
+           <li><a href="contact.html">Contacto</a></li>
+           <li><a href="blog.html">Blog</a></li>
+        </ul>      
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section>
+    <p>Aqu&iacute; podr&aacute;s encontrar recetas veganas ricas, saludables y r&aacute;pidas para cualquier ocasi&oacute;n.</p>     
+    <p>Explora nuevas recetas y descubre el placer de la comida vegana con nuestras deliciosas opciones.</p>
+	    
+     <h2 class="section-heading">Recetas destacadas</h2>
+
+      <div class="slider">
+        <div class="slides">
+          <div class="slide parallax-slide" data-href="">
+            <div class="slide-content">
+              <button class="descubre-btn" onclick="discoverRecipes()">Descubre mis recetas</button>
+            </div>
+          </div>
+
+          <div class="slide" data-href="https://stalwart-manatee-2af945.netlify.app/recipes">
+            <img src="pepino.jpg" alt="Receta 1" />
+          </div>
+
+          <div class="slide" data-href="https://stalwart-manatee-2af945.netlify.app/recipes#recipe2">
+            <img src="tofu.jpg" alt="Receta 2" />
+          </div>
+        </div>
+
+        <div class="slider-controls hidden">
+          <button class="arrow" onclick="prevSlide()">&#10094;</button>
+          <button class="arrow" onclick="goToRecipe()">Ir a la receta</button>
+          <button class="arrow" onclick="nextSlide()">&#10095;</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
     <p>Copyright 2024 | Aviso legal</p>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="recipes.html">Recetas</a></li>
-            <li><a href="about.html">Sobre mí</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-            <li><a href="blog.html">Blog</a></li>
-        </ul>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="recipes.html">Recetas</a></li>
+         <li><a href="about.html">Sobre mí</a></li>
+         <li><a href="contact.html">Contacto</a></li>
+         <li><a href="blog.html">Blog</a></li>      </ul>
     </nav>
-</footer>
+  </footer>
+ 
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const sliderControls = document.querySelector('.slider-controls');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+      });
+
+      if (index === 0) {
+        sliderControls.classList.add('hidden');
+      } else {
+        sliderControls.classList.remove('hidden');
+      }
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function goToRecipe() {
+      const currentElement = slides[currentSlide];
+      const recipeLink = currentElement.getAttribute('data-href');
+      if (recipeLink) {
+        window.location.href = recipeLink;
+      }
+    }
+
+    function discoverRecipes() {
+      currentSlide = 1;
+      showSlide(currentSlide);
+    }
+
+    showSlide(currentSlide);
+  </script>
 </body>
-</html> 
+</html>
