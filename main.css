@@ -1,6 +1,4 @@
-/* main.css */
 
-/* Global Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -12,11 +10,10 @@ body {
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
-  font-size: 12pt; /* As specified in the requirements */
+  font-size: 12pt; 
   padding: 20px;
 }
 
-/* Header Styles */
 header {
   width: 100%;
   background-color: #50b3a2;
@@ -54,7 +51,6 @@ header {
   text-decoration: underline;
 }
 
-/* Container and Section Styles */
 .container {
   max-width: 1200px;
   margin: 20px auto;
@@ -82,7 +78,6 @@ section p {
   color: #555;
 }
 
-/* Slider Styles */
 .slider {
   position: relative;
   max-width: 750px;
@@ -175,7 +170,6 @@ section p {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Footer Styles */
 footer {
   background: #333;
   color: white;
@@ -205,7 +199,6 @@ footer nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Image Styles for Recipes and About Pages */
 .recipe-image { 
   width: 300px; 
   height: 300px; 
@@ -221,7 +214,6 @@ footer nav ul li a:hover {
   float: left;
 }
 
-/* Article and Section Titles */
 article h2 {
   text-decoration: underline;
   margin-bottom: 10px;
@@ -254,18 +246,16 @@ section h2 {
   color: #50b3a2;
 }
 
-/* Responsive Design: Adjustments for Smaller Screens */
 @media (max-width: 768px) {
-  /* Reduce padding for header and main container */
   .header-content, .container {
     padding: 10px;
   }
-  /* Stack the navigation menu vertically */
+
   header nav ul {
     flex-direction: column;
     gap: 10px;
   }
-  /* Make images fluid */
+
   .about-image,
   .recipe-image {
     width: 100%;
@@ -274,11 +264,11 @@ section h2 {
     margin: 0 auto 20px;
     float: none;
   }
-  /* Adjust the slider to use full width */
+  
   .slider {
     max-width: 100%;
   }
-  /* Stack footer navigation links vertically */
+
   footer nav ul {
     flex-direction: column;
     gap: 10px;
